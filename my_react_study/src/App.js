@@ -18,6 +18,7 @@ import {useState} from 'react'
 
 // way 1 to create react app/component
 
+
 const App = (props) => {
 
   const [personState, setPerson] = useState({
@@ -77,7 +78,9 @@ const App = (props) => {
   
   return (
     <div className="App">
-
+      
+{/* React syntax practice */}
+{/* 
       <h1>Basic React syntax</h1> 
 
       <UserInput
@@ -86,9 +89,10 @@ const App = (props) => {
 
       <UserOutput 
       name = {userState.user[0].name} />
+*/}
     
 
-      
+    
       {/* <h1>Hello world</h1>
       <Person name ={personState.person[0].name}>Additional info</Person>
       <Person name ={personState.person[1].name}></Person>
@@ -166,6 +170,7 @@ class App extends Component {
   }
 }
 */
+
 
 
 export default App;

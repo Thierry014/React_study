@@ -12,7 +12,7 @@ const person = (props) => {
             <p>{props.children}</p>
 
             {/* two way binding */}
-            <input type="text" value={props.name} onChange={props.change}></input>
+            <input type="text" value={props.name} onChange={props.update}></input>
         </div>
     
     )
