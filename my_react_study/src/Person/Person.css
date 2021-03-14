@@ -1,0 +1,14 @@
+.Person {
+    width: 60%;
+    margin: 16px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 16px;
+    text-align: center;
+}
+
+/* how to add css into module 
+1. create css file 
+2. import css file in module.js file
+3. add class name to dom element 
+*/
