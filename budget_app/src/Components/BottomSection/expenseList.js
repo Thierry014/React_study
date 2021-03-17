@@ -10,7 +10,7 @@ const expenseList = (props) => {
                             <div className="item__description">{props.desc}</div>
                             <div className="right clearfix">
                                 <div className="item__value">- {props.amount}</div>
-                                <div className="item__percentage">21%</div>
+                                <div className="item__percentage">{props.per}%</div>
                                 <div className="item__delete">
                                     <button onClick={(e)=>props.delete(e)} className="item__delete--btn"><i id={props.id} className="ion-ios-close-outline"></i></button>
                                 </div>

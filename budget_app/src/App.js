@@ -31,6 +31,7 @@ export default class App extends Component {
     const type = this.state.isIncome
     const description = this.desc_ref.current.value;
     const amount = parseInt(this.amount_ref.current.value);
+    
 
     // !check income info
     // console.log({ type, description, amount })
@@ -44,13 +45,14 @@ export default class App extends Component {
     }
     else {
       const expense = this.state.expense
-      expense.push({ description: description, amount: amount })
+      expense.push({ description: description, amount: amount, per: 0 })
       this.setState({ expense: expense })
     }
 
 
     this.updateRestData()
   }
+  
   updateRestData(){
      // *  calculate total inc/exp, profit
      let total_inc = this.state.income.map((incomeobj) => incomeobj.amount)
@@ -61,8 +63,15 @@ export default class App extends Component {
      this.setState({ total_inc: total_inc })
  
      let total_exp = this.state.expense.map((expobj) => expobj.amount)
+
      if (total_exp.length) {
+
+       //calculate 
+       let exparr = this.state.expense
        total_exp = total_exp.reduce((a, b) => a + b)
+       exparr.map((expobj)=>expobj.per = Math.floor(expobj.amount/total_exp*100))
+
+
      }
      this.setState({ total_exp: total_exp })
  

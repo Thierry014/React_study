@@ -26,6 +26,7 @@ export default function BottomSection(props) {
                     return <ExpenseList 
                     desc={expense.description} 
                     amount = {expense.amount}
+                    per = {expense.per}
                     key ={index}
                     id ={'expense-'+index}
                     delete = {props.delete}/>
