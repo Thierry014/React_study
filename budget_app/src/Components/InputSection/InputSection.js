@@ -6,8 +6,8 @@ export default function InputSection(props) {
             <div className="add">
                 <div className="add__container">
                 <select className="add__type" defaultValue='inc' onChange={props.changeType}>
-                        <option value="inc">+</option>
-                        <option value="exp">-</option>
+                        <option value="inc">Income</option>
+                        <option value="exp">Expense</option>
                 </select>
                 <input type="text" className="add__description" ref={props.domDesc} placeholder="Add description" />
                 <input type="number" className="add__value" ref={props.domAmount} placeholder="Value" />

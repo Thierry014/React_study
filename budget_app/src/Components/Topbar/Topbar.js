@@ -24,7 +24,7 @@ export default function Topbar(props) {
                     <div className="budget__expenses--text">Expenses</div>
                     <div className="right clearfix">
                         <div className="budget__expenses--value">- {props.total_exp}</div>
-                        <div className="budget__expenses--percentage">45%</div>
+                        <div className="budget__expenses--percentage">{props.total_per}%</div>
                     </div>
                 </div>
             </div>

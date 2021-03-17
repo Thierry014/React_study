@@ -11,7 +11,10 @@ export default function BottomSection(props) {
                 {props.income_arr.map((income, index) => {
                     return <IncomeList 
                     desc = {income.description} 
-                    amount = {income.amount}/>
+                    amount = {income.amount}
+                    key ={index}
+                    id ={'income-'+index}
+                    delete = {props.delete}/>
                 })}
 
             </div>
@@ -22,7 +25,10 @@ export default function BottomSection(props) {
                 {props.expense_arr.map((expense, index) => {
                     return <ExpenseList 
                     desc={expense.description} 
-                    amount = {expense.amount}/>
+                    amount = {expense.amount}
+                    key ={index}
+                    id ={'expense-'+index}
+                    delete = {props.delete}/>
                 })}
             </div>
         </div>
