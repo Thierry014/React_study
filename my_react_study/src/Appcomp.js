@@ -1,8 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.module.css';
+import classes from './App.module.css'
 
 // import customize module
-import Person from './Person/Person';
+import Person from './Components/Person/Person';
+import Persons from './Components/Persons/Persons';
+import Cockpit from './Components/Cockpit/Cockpit'
 // import UserInput from './UserInput/UserInput'
 // import UserOutput from './UserOutput/UserOutput'
 
@@ -12,7 +15,6 @@ import { render } from 'react-dom';
 // import hook to usState
 import { useState } from 'react'
 import React, { Component } from 'react'
-import person from './Person/Person';
 
 
 /**
@@ -77,7 +79,7 @@ export default class Appcomp extends Component {
 
         let persons = null
         if (this.state.showName) {
-            // * (JSX) in var
+            // * (JSX) in vars
             persons = ( 
                 /*
                     <div>
@@ -88,27 +90,24 @@ export default class Appcomp extends Component {
                     </div>
                     */
                 <div>
-                    {
-                        this.state.Person.map((person,index) => {
-                            return <Person 
-                            name={person.name}
-                            //click={()=>this.delete(index)}
-                            click={this.delete.bind(this,index)}
-                            update = {(event)=>this.update(event,index)}
-                            key = {index} />
-                        })
-                    }
+                    <Persons 
+                    personArray = {this.state.Person}
+                    delete = {this.delete}
+                    update = {this.update}/>
                 </div>
             );
-
-
         }
 
+        // const classes = []
+        // if (this.state.Person.length<=2){
+        //     classes.push('red')
+        // }
+
         return (
-            <div className="App">
-                <h1>Component App</h1>
-                <button onClick={this.toggle}>Toggle</button>
-                <p>app comp</p>
+            <div>
+                <Cockpit
+                toggle = {this.toggle} />
+
 
 
                 {/* {//* normal do condition} */}

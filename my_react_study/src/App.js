@@ -1,10 +1,10 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.module.css';
 
 // import customize module
-import Person from './Person/Person';
-import UserInput from './UserInput/UserInput'
-import UserOutput from './UserOutput/UserOutput'
+import Person from './Components/Person/Person';
+// import UserInput from './UserInput/UserInput'
+// import UserOutput from './UserOutput/UserOutput'
 
 
 import React, {Component} from 'react'

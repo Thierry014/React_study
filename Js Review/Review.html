@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Remote style sheet -->
+    <link rel="stylesheet" href="review.css" />
+  </head>
+
+  <body>
+    <div id="content">
+      <h1>Js review</h1>
+      <hr />
+      <button onclick="arrowFun()">Arrow</button>
+      <button onclick="arrowTest()">Arrow2</button>
+    </div>
+  </body>
+
+  <script>
+    // ES6 arrow function
+    arrowFun = () => {
+      console.log("arrow function");
+    };
+
+    const arrowTest = () => {
+      console.log("2nd arrow clicked");
+    };
+    // Class inhertance (ES7 without constructor and super())
+    class Person {
+      age = 10;
+      say = () => {};
+    }
+    class Child extends Person {}
+
+    let sam = new Person();
+    let ben = new Child();
+    console.log(sam.age, ben.age);
+
+    // ... Operator
+    // split => addition
+    l1 = [1, 2, 3, 4];
+    l2 = [...l1, 566];
+
+    obj1 = { age: 1, name: "Sa" };
+    obj2 = { ...obj1, job: "Teacher" };
+    // rest => transfer other data type to array
+
+    function myFun(a, b, ...manyMoreArgs) {
+      console.log("a", a);
+      console.log("b", b);
+      console.log("manyMoreArgs", manyMoreArgs);
+    }
+
+    myFun("one", "two", "three", "four", "five", "six");
+
+    //destructing 
+
+    
+  </script>
+</html>

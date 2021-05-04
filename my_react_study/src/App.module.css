@@ -3,7 +3,13 @@
 }
 
 
+.red{
+  color:red
+}
 
+button:hover{
+  background-color: blue;
+}
 
 
 
