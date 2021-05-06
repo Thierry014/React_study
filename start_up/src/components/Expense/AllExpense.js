@@ -1,7 +1,7 @@
 import "./AllExpense.css";
 import Expense from "./Expense";
 
-function allExpense(props) {
+function AllExpense(props) {
   return (
     <div className="expenses">
       <Expense
@@ -28,4 +28,4 @@ function allExpense(props) {
   );
 }
 
-export default allExpense;
+export default AllExpense;

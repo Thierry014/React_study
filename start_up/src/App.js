@@ -2,7 +2,8 @@ import './App.css';
 
 // import components 
 // import Expense from './components/Expense'
-import AllExpense from './components/AllExpense'
+import AllExpense from './components/Expense/AllExpense'
+import AddExpense from './components/AddExpense/NewExpense'
 function App() {
 
   const expenses = [
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div>
+      <AddExpense />
       <AllExpense items={expenses} />
     </div>
   );
