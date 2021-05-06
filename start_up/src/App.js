@@ -28,9 +28,16 @@ function App() {
     },
   ];
 
+  function getExpenseFromNewExpense (exp){
+    const expense = {
+      ...exp
+    }
+    console.log(expense)
+  }
+
   return (
     <div>
-      <AddExpense />
+      <AddExpense getExpense={getExpenseFromNewExpense}/>
       <AllExpense items={expenses} />
     </div>
   );
