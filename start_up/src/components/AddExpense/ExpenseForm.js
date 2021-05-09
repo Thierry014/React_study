@@ -6,6 +6,10 @@ function ExpenseForm(props) {
   const [date, setdate] = useState("");
   const [amount, setamount] = useState("");
 
+  // show expense
+  const [showExpense, setshow] = useState(false);
+
+
 
   function titleHandler(e) {
     settitle(e.target.value);
@@ -34,8 +38,16 @@ function ExpenseForm(props) {
     settitle('')
   }
 
+  function showExpenseForm(e){
+    e.preventDefault()
+    setshow(!showExpense)
+    console.log(showExpense)
+  }
+
   return (
     <form onSubmit={submitHander}>
+      {showExpense === false && <button onClick={showExpenseForm}>Add New Expense</button>}
+      { showExpense === true &&
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -51,9 +63,11 @@ function ExpenseForm(props) {
         </div>
 
         <div className="new-expense__actions">
+          <button type='button' onClick={showExpenseForm}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>
       </div>
+}
     </form>
   );
 }
